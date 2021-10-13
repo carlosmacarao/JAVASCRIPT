@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAcionalidade</title>
+    <style>
+        body {
+            background-image: linear-gradient(to left, #F1D8C9, #F2C3A7);
+            font: normal 1.2em Arial;
+        }
+        main {
+            background-color: white;
+            width: 700px;
+            margin: auto;
+            padding: 12px;
+            border-radius: 10px;
+            box-shadow: 3px 3px 5px darkgray;
+        }
+        input {
+            width: 130px;
+            font: normal 1.1em Arial;
+            border-radius: 5px;
+        }
+        .especial {
+            width: 90px;
+            background-color: #F1D8C9;
+            color: gray;
+        }
+        .especial:hover {
+            background: gray;
+            color: black;
+        }
+        h1 {
+            text-align: center;
+            color: #F39209;
+            text-shadow: darkgray;
+        }
+    </style>
+</head>
+<body>
+    <main>
+    <h1>Verificando Nacionalidade</h1>
+    Qual o seu País: <input type="text" name="nac" id="nac">
+    <input type="button" value="Verificar" onclick="verificar()" class="especial">
+    <div id="res">
+
+    </div>
+    </main>
+    <script>
+        function verificar(){
+            var nacional = window.document.getElementById('nac');
+            var pais = (nacional.value);
+            var res = window.document.querySelector('div#res');
+            res.innerHTML = `<p>Vivendo em ${pais}.</p>`
+            if (pais == 'Moçambique' || pais == 'MOÇAMBIQUE') {
+                res.innerHTML += `<p>Voce é Moçambicano.</p>`;
+            } else {
+                res.innerHTML += `<p>Voce é Estrangeiro.</p>` 
+            }
+        }
+    </script>
+</body>
+</html>

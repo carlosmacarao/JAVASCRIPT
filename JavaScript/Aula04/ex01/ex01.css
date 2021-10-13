@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+main {
+    width: 700px;
+    padding: 10px;
+    background-color: #fff;
+    margin: auto;
+    border-radius: 10px;
+
+}
+body {
+    background-image: linear-gradient(to right, #F1D8C9, #F2C3A7);
+    font-size: 17pt;
+}
+h1 {
+    text-align: center;
+    color: #F39209;
+}
+p {
+    text-align: justify;
+}
